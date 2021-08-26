@@ -19,3 +19,25 @@ services:
       - PGADMIN_DEFAULT_PASSWORD=root
     ports:
       - 5050:80
+
+  mysql:
+    image: mysql:5
+    environment:
+      - MYSQL_DATABASE=my_store
+      - MYSQL_USER=root
+      - MYSQL_ROOT_PASSWORD=admin123
+      - MYSQL_PORT=3306
+    ports:
+      - 3306:3306
+    volumes:
+      - ./mysql_data:/var/lib/mysql
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    environment:
+      - MYSQL_ROOT_PASSWORD=admin123
+      - PMA_HOST=mysql
+    ports:
+      - 8080:80
+
+
