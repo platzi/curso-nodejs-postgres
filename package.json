@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon index.js",
-    "start": "NODE_ENV=production node index.js",
+    "start": "node index.js",
     "lint": "eslint",
     "migrations:generate": "sequelize-cli migration:generate --name",
     "migrations:run": "sequelize-cli db:migrate",
@@ -20,8 +20,7 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^3.4.1",
     "nodemon": "^2.0.12",
-    "prettier": "^2.3.2",
-    "sequelize-cli": "^6.2.0"
+    "prettier": "^2.3.2"
   },
   "dependencies": {
     "@hapi/boom": "^9.1.4",
@@ -33,7 +32,8 @@
     "mysql2": "^2.3.0",
     "pg": "^8.7.1",
     "pg-hstore": "^2.3.4",
-    "sequelize": "^6.6.5"
+    "sequelize": "^6.6.5",
+    "sequelize-cli": "^6.2.0"
   },
   "engines": {
     "node": "14.x"
